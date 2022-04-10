@@ -14,18 +14,16 @@
 
 - Admin Panel
 - Client-Side
-- Online Food Ordering
+- Delete and Add products (admin)
 - Manage Food Categories
 - Manage Food Items
-- Food Order Management
-- System User Management
 - Total Revenue
 - Overview Data
 
 
 ** How to Run**
 
-> After you finish downloading the project, unzip the project file and head over to your XAMPP directory.
+- After you finish downloading the project, unzip the project file and head over to your XAMPP directory.
 - Copy and paste the extracted folder in your XAMPP  --> “htdocs”.
 - Start XAMPP.
 - Open your favorite browser; (Google Chrome or Mozilla Firefox).
