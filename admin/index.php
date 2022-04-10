@@ -1,23 +1,22 @@
-
 <?php include('partials/menu.php'); ?>
 
-        <!-- Main Content Section Starts -->
-        <div class="main-content">
-            <div class="wrapper">
-                <h1>Administrator Dashboard</h1>
-                <br><br>
-                <?php 
+<!-- Main Content Section Starts -->
+<div class="main-content">
+ <div class="wrapper">
+  <h1>Administrator Dashboard</h1>
+  <br><br>
+  <?php 
                     if(isset($_SESSION['login']))
                     {
                         echo $_SESSION['login'];
                         unset($_SESSION['login']);
                     }
                 ?>
-                <br><br>
+  <br><br>
 
-                <div class="col-4 text-center">
+  <div class="col-4 text-center">
 
-                    <?php 
+   <?php 
                         //Sql Query 
                         $sql = "SELECT * FROM tbl_category";
                         //Execute Query
@@ -26,14 +25,14 @@
                         $count = mysqli_num_rows($res);
                     ?>
 
-                    <h1><?php echo $count; ?></h1>
-                    <br />
-                    Food Categories
-                </div>
+   <h1><?php echo $count; ?></h1>
+   <br />
+   Food Categories
+  </div>
 
-                <div class="col-4 text-center">
+  <div class="col-4 text-center">
 
-                    <?php 
+   <?php 
                         //Sql Query 
                         $sql2 = "SELECT * FROM tbl_food";
                         //Execute Query
@@ -42,14 +41,14 @@
                         $count2 = mysqli_num_rows($res2);
                     ?>
 
-                    <h1><?php echo $count2; ?></h1>
-                    <br />
-                    Foods
-                </div>
+   <h1><?php echo $count2; ?></h1>
+   <br />
+   Foods
+  </div>
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Sql Query 
                         $sql3 = "SELECT * FROM tbl_order";
                         //Execute Query
@@ -58,14 +57,14 @@
                         $count3 = mysqli_num_rows($res3);
                     ?>
 
-                    <h1><?php echo $count3; ?></h1>
-                    <br />
-                    Total Orders
-                </div>
+   <h1><?php echo $count3; ?></h1>
+   <br />
+   Total Orders
+  </div>
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Creat SQL Query to Get Total Revenue Generated
                         //Aggregate Function in SQL
                         $sql4 = "SELECT SUM(total) AS Total FROM tbl_order WHERE status='Delivered'";
@@ -81,14 +80,14 @@
 
                     ?>
 
-                    <h1>$<?php echo $total_revenue; ?></h1>
-                    <br />
-                    Revenue Generated
-                </div>
+   <h1>GH&#8373; <?php echo $total_revenue; ?></h1>
+   <br />
+   Revenue Generated
+  </div>
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Sql Query 
                         $sql6 = "SELECT * FROM tbl_order WHERE status = 'Ordered'";
                         //Execute Query
@@ -97,14 +96,14 @@
                         $count6 = mysqli_num_rows($res6);
                     ?>
 
-                    <h1><?php echo $count6; ?></h1>
-                    <br />
-                    Pending Orders
-                </div>
+   <h1><?php echo $count6; ?></h1>
+   <br />
+   Pending Orders
+  </div>
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Sql Query 
                         $sql7 = "SELECT * FROM tbl_order WHERE status = 'On Delivery'";
                         //Execute Query
@@ -113,15 +112,15 @@
                         $count7 = mysqli_num_rows($res7);
                     ?>
 
-                    <h1><?php echo $count7; ?></h1>
-                    <br />
-                    On Delivery Orders
-                </div>
+   <h1><?php echo $count7; ?></h1>
+   <br />
+   On Delivery Orders
+  </div>
 
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Sql Query 
                         $sql7 = "SELECT * FROM tbl_order WHERE status = 'Cancelled'";
                         //Execute Query
@@ -130,15 +129,15 @@
                         $count7 = mysqli_num_rows($res7);
                     ?>
 
-                    <h1><?php echo $count7; ?></h1>
-                    <br />
-                    Cancelled Orders
-                </div>
+   <h1><?php echo $count7; ?></h1>
+   <br />
+   Cancelled Orders
+  </div>
 
 
-                <div class="col-4 text-center">
-                    
-                    <?php 
+  <div class="col-4 text-center">
+
+   <?php 
                         //Sql Query 
                         $sql8 = "SELECT * FROM tbl_admin";
                         //Execute Query
@@ -147,15 +146,15 @@
                         $count8 = mysqli_num_rows($res8);
                     ?>
 
-                    <h1><?php echo $count8; ?></h1>
-                    <br />
-                    System Administrator
-                </div>
+   <h1><?php echo $count8; ?></h1>
+   <br />
+   System Administrator
+  </div>
 
-                <div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-            </div>
-        </div>
-        <!-- Main Content Setion Ends -->
+ </div>
+</div>
+<!-- Main Content Setion Ends -->
 
 <?php include('partials/footer.php') ?>

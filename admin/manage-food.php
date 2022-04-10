@@ -1,17 +1,17 @@
 <?php include('partials/menu.php'); ?>
 
 <div class="main-content">
-    <div class="wrapper">
-        <h1>Manage Food Items</h1>
+ <div class="wrapper">
+  <h1>Manage Food Items</h1>
 
-        <br /><br />
+  <br /><br />
 
-                <!-- Button to Add Admin -->
-                <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Food</a>
+  <!-- Button to Add Admin -->
+  <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Food</a>
 
-                <br /><br /><br />
+  <br /><br /><br />
 
-                <?php 
+  <?php 
                     if(isset($_SESSION['add']))
                     {
                         echo $_SESSION['add'];
@@ -44,18 +44,18 @@
                 
                 ?>
 
-                <table class="tbl-full">
-                    <tr>
-                        <th>S.N.</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>Featured</th>
-                        <th>Active</th>
-                        <th>Actions</th>
-                    </tr>
+  <table class="tbl-full">
+   <tr>
+    <th>S.N.</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Featured</th>
+    <th>Active</th>
+    <th>Actions</th>
+   </tr>
 
-                    <?php 
+   <?php 
                         //Create a SQL Query to Get all the Food
                         $sql = "SELECT * FROM tbl_food";
 
@@ -83,12 +83,12 @@
                                 $active = $row['active'];
                                 ?>
 
-                                <tr>
-                                    <td><?php echo $sn++; ?>. </td>
-                                    <td><?php echo $title; ?></td>
-                                    <td>$<?php echo $price; ?></td>
-                                    <td>
-                                        <?php  
+   <tr>
+    <td><?php echo $sn++; ?>. </td>
+    <td><?php echo $title; ?></td>
+    <td>GH&#8373; <?php echo $price; ?></td>
+    <td>
+     <?php  
                                             //CHeck whether we have image or not
                                             if($image_name=="")
                                             {
@@ -99,20 +99,20 @@
                                             {
                                                 //WE Have Image, Display Image
                                                 ?>
-                                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" width="100px">
-                                                <?php
+     <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" width="100px">
+     <?php
                                             }
                                         ?>
-                                    </td>
-                                    <td><?php echo $featured; ?></td>
-                                    <td><?php echo $active; ?></td>
-                                    <td>
-                                        <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>" class="btn-secondary">Update Food</a>
-                                        <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Food</a>
-                                    </td>
-                                </tr>
+    </td>
+    <td><?php echo $featured; ?></td>
+    <td><?php echo $active; ?></td>
+    <td>
+     <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>" class="btn-secondary">Update Food</a>
+     <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Food</a>
+    </td>
+   </tr>
 
-                                <?php
+   <?php
                             }
                         }
                         else
@@ -123,10 +123,10 @@
 
                     ?>
 
-                    
-                </table>
-    </div>
-    
+
+  </table>
+ </div>
+
 </div>
 
 <?php include('partials/footer.php'); ?>
