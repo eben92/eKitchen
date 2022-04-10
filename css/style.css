@@ -142,11 +142,19 @@ a:focus {
 }
 
 .food-search2 {
-  background-image: url(../images/ibg.jpg);
+  background-image: url(../images/Restaurant-App-Development-Benefits-Of-Online-Food-Ordering-Services.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 7% 0;
+}
+
+/* .form-item-container {
+  background: #000000;
+} */
+
+.loll {
+  height: 100%;
 }
 
 .image-s {
@@ -250,7 +258,7 @@ a:focus {
 
 /* for Order Section */
 .order {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 .input-responsive {
