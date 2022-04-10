@@ -89,7 +89,7 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
      <div class="container ">
-      <h2 class="text-center">Our Food Menu</h2>
+      <h2 class="text-center">Our Menu</h2>
 
       <div class="food-menu-container">
 
